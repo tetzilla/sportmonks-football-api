@@ -1,0 +1,1 @@
+This will be a PHP Library for Sportmonks Soccer API v3! This one will be heavily based on https://github.com/joesaunderson/sportmonks-soccer.
