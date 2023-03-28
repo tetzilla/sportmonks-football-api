@@ -13,12 +13,17 @@ use stdClass;
  */
 class Types extends FootballClient {
 
+    public function __construct() {
+        $this->baseUri = 'https://api.sportmonks.com/v3/core/';
+    }
+
     /**
      * @return stdClass
      * @throws ApiRequestException
      */
+
     public function all() {
-        $url = "core/types";
+        $url = "types";
         return $this->call($url);
     }
 
@@ -28,7 +33,7 @@ class Types extends FootballClient {
      * @throws ApiRequestException
      */
     public function getById(int $typeId) {
-        $url = "core/types/{$typeId}";
+        $url = "types/{$typeId}";
         return $this->call($url);
     }
 }
