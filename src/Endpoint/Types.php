@@ -18,7 +18,7 @@ class Types extends FootballClient {
      * @throws ApiRequestException
      */
     public function all() {
-        $url = "types";
+        $url = "core/types";
         return $this->call($url);
     }
 
@@ -28,7 +28,7 @@ class Types extends FootballClient {
      * @throws ApiRequestException
      */
     public function getById(int $typeId) {
-        $url = "types/{$typeId}";
+        $url = "core/types/{$typeId}";
         return $this->call($url);
     }
 }
