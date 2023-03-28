@@ -4,7 +4,6 @@ sportmonks-football-api.code-workspace
 build
 composer.lock
 coverage
-phpunit.xml
 phpstan.neon
 testbench.yaml
 vendor
