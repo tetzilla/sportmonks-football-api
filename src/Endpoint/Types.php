@@ -13,9 +13,7 @@ use stdClass;
  */
 class Types extends FootballClient {
 
-    public function __construct() {
-        $this->baseUri = 'https://api.sportmonks.com/v3/core/';
-    }
+    public $baseUri = 'https://api.sportmonks.com/v3/core/';
 
     /**
      * @return stdClass
