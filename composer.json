@@ -1,0 +1,25 @@
+{
+  "name": "crt7/sportmonks-football-api",
+  "description": "Simple SportMonks Football API Client for PHP",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Carsten Tetzlaff",
+      "email": "carsten-tetzlaff@outlook.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.3 | ^8",
+    "symfony/http-client": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sportmonks\\Football\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.6"
+  }
+}
