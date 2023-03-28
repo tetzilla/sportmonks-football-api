@@ -16,6 +16,9 @@ use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
  * @package Sportmonks\Football
  */
 class FootballClient {
+
+    public $baseUri = 'https://api.sportmonks.com/v3/football/';
+
     private $client;
     private $query = array();
 
@@ -37,7 +40,7 @@ class FootballClient {
         }
 
         // Create Client
-        $this->client = HttpClient::create(['base_uri' => 'https://api.sportmonks.com/v3/football/']);
+        $this->client = HttpClient::create(['base_uri' => $this->baseUri]);
     }
 
     /**
