@@ -137,7 +137,7 @@ class FootballClient {
 	 * @return $this
 	 */
 	public function setPerPage(int $perPage) {
-		$this->query['per-page'] = $perPage;
+		$this->query['per_page'] = $perPage;
 		return $this;
 	}
 }
