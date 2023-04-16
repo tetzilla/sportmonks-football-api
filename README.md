@@ -9,7 +9,7 @@ PHP >= 7.3
 ## Installation
 
 ```
-composer require crt79/sportmonks-football-api
+composer require tetzilla/sportmonks-football-api:dev-master
 ```
 
 ## Setup
