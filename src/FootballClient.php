@@ -64,26 +64,6 @@ class FootballClient {
 	}
 
 	/**
-	 * @param array $bookmakerIds
-	 * @return $this
-	 */
-	public function setBookmakers(array $bookmakerIds) {
-		// Trim & Join Array of Bookmaker IDs
-		$this->query['bookmakers'] = implode(",", array_map("trim", array_filter($bookmakerIds)));
-		return $this;
-	}
-
-	/**
-	 * @param array $fixtureIds
-	 * @return $this
-	 */
-	public function setFixtures(array $fixtureIds) {
-		// Trim & Join Array of Fixtures IDs
-		$this->query['fixtures'] = implode(",", array_map("trim", array_filter($fixtureIds)));
-		return $this;
-	}
-
-	/**
 	 * @param array $includes
 	 * @return $this
 	 */
@@ -94,32 +74,18 @@ class FootballClient {
 	}
 
 	/**
-	 * @param array $leagueIds
+	 * @param array $includes
 	 * @return $this
 	 */
-	public function setLeagues(array $leagueIds) {
-		// Trim & Join Array of League IDs
-		$this->query['leagues'] = implode(",", array_map("trim", array_filter($leagueIds)));
-		return $this;
-	}
+	public function setFilters(array $filters) {
+		// prepare filter
+		$filter = [];
 
-	/**
-	 * @param array $marketIds
-	 * @return $this
-	 */
-	public function setMarkets(array $marketIds) {
-		// Trim & Join Array of Market IDs
-		$this->query['markets'] = implode(",", array_map("trim", array_filter($marketIds)));
-		return $this;
-	}
+		foreach ($filters as $filterName => $filterVars) {
+			$filter[] = $filterName . '=' . implode(",", array_map("trim", array_filter($filterVars)));
+		}
 
-	/**
-	 * @param int $groupId
-	 * @return FootballClient
-	 */
-	public function setGroup(int $groupId): self {
-		// Add group ID
-		$this->query['group_id'] = $groupId;
+		$this->query['filters'] = implode("&", $filter);
 		return $this;
 	}
 
