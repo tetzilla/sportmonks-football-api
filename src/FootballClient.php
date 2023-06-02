@@ -82,7 +82,7 @@ class FootballClient {
 		$filter = [];
 
 		foreach ($filters as $filterName => $filterVars) {
-			$filter[] = $filterName . '=' . implode(",", array_map("trim", array_filter($filterVars)));
+			$filter[] = $filterName . ':' . implode(",", array_map("trim", array_filter($filterVars)));
 		}
 
 		$this->query['filters'] = implode("&", $filter);
