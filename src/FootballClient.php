@@ -36,7 +36,7 @@ class FootballClient {
 
 		// Set Timezone
 		if (isset($_ENV['SPORTMONKS_TIMEZONE'])) {
-			$this->query['tz'] = $_ENV['SPORTMONKS_TIMEZONE'];
+			$this->query['timezone'] = $_ENV['SPORTMONKS_TIMEZONE'];
 		}
 
 		// Create Client
