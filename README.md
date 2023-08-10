@@ -14,7 +14,7 @@ composer require tetzilla/sportmonks-football-api
 
 ## Setup
 
-The API Client relies on [Environment variables](https://www.php.net/manual/en/reserved.variables.environment.php) for 
+The API Client relies on [Environment variables](https://www.php.net/manual/en/reserved.variables.environment.php) for
 configuration (setting API token & timezone).
 
 ## Prerequisites
@@ -56,15 +56,15 @@ use Sportmonks\Football\FootballApi;
 $response = FootballApi::bookmakers()->getAll();
 ```
 
-## Pagination, Filtering, Sorting & Data Enrichment 
+## Pagination, Filtering, Sorting & Data Enrichment
 
-The [Sportmonks API](https://docs.sportmonks.com/football/tutorials-and-guides/tutorials/introduction/make-your-first-request) 
+The [Sportmonks API](https://docs.sportmonks.com/football/tutorials-and-guides/tutorials/introduction/make-your-first-request)
 allows for advanced filtering and sorting, as well as adding data via relationships. This client supports the following:
 
 ### Pagination
 
 ```php
-// API call for Fixtures with page specified 
+// API call for Fixtures with page specified
 $response = FootballApi::fixtures()
     ->setPage(3)
     ->getByDate('2023-03-19');
@@ -86,11 +86,11 @@ $response = FootballApi::fixtures()
 ```php
 $response = FootballApi::fixtures()
     ->setInclude(['events','statistics.type'])
-    ->setFilter(['eventTypes:18,14'])
+    ->setFilters(['eventTypes' => [18,14]])
     ->getByDate('2023-03-19');
 ```
-Note: This client will not validate the usage for the correct endpoints and will not throw an error. Refer to the 
-[Sportmonks docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints) to see which endpoints support the above parameters. 
+Note: This client will not validate the usage for the correct endpoints and will not throw an error. Refer to the
+[Sportmonks docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints) to see which endpoints support the above parameters.
 
 
 ## Full Endpoint Examples
@@ -626,7 +626,7 @@ $response = FootballApi::tvStations()->getById($stationId);
 $response = FootballApi::tvStations()->getByFixtureId($fixtureId);
 ```
 
-### Predictions 
+### Predictions
 
 #### Get predictability - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/predictions/get-probabilities)
 
@@ -652,7 +652,7 @@ $response = FootballApi::tvStations()->getPredictabilityByFixtureId($fixtureId);
 $response = FootballApi::tvStations()->valueBets();
 ```
 
-### Pre-match Odds 
+### Pre-match Odds
 
 #### Get all - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/pre-match-odds/get-all-odds)
 
@@ -683,7 +683,7 @@ $response = FootballApi::preMatchOdds()->getByFixtureAndMarketId($fixtureId,$mar
 $response = FootballApi::preMatchOdds()->getLastUpdated();
 ```
 
-### Inplay Odds 
+### Inplay Odds
 
 #### Get all - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/inplay-odds/get-all-inplay-odds)
 
