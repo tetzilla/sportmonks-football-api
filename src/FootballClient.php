@@ -80,12 +80,16 @@ class FootballClient {
 	public function setFilters(array $filters) {
 		// prepare filter
 		$filter = [];
-
 		foreach ($filters as $filterName => $filterVars) {
-			$filter[] = $filterName . ':' . implode(",", array_map("trim", array_filter($filterVars)));
+			if (is_array($filterVars)) {
+				$filter[] = $filterName . ':' . implode(",", array_map("trim", array_filter($filterVars)));
+			} elseif ($filterVars == 'deleted') {
+				$filter[] = $filterVars;
+			}
 		}
 
 		$this->query['filters'] = implode(";", $filter);
+
 		return $this;
 	}
 
