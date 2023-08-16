@@ -30,4 +30,24 @@ class Venues extends FootballClient {
         $url = "venues/{$venueId}";
         return $this->call($url);
     }
+
+    /**
+     * @param int $seasonId
+     * @return stdClass
+     * @throws ApiRequestException
+     */
+    public function getBySeasonId(int $seasonId) {
+        $url = "venues/seasons/{$seasonId}";
+        return $this->call($url);
+    }
+
+    /**
+     * @param string $searchQuery
+     * @return stdClass
+     * @throws ApiRequestException
+     */
+    public function search(string $searchQuery) {
+        $url = "venues/search/{$searchQuery}";
+        return $this->call($url);
+    }
 }
