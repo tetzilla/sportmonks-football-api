@@ -206,6 +206,12 @@ $response = FootballApi::types()->all();
 $response = FootballApi::types()->getById();
 ```
 
+#### Get by Entity - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/types/get-type-by-entity)
+
+```php
+$response = FootballApi::types()->getByEntity();
+```
+
 ### Leagues
 
 ##### Get all - [View Sportmonks Docs](https://sportmonks.com/docs/football/2.0/leagues/a/get-all-leagues/6)
