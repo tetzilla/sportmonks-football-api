@@ -29,6 +29,12 @@ use Sportmonks\Football\Endpoint\Transfers;
 use Sportmonks\Football\Endpoint\TvStations;
 use Sportmonks\Football\Endpoint\Types;
 use Sportmonks\Football\Endpoint\Venues;
+use Sportmonks\Football\Endpoint\Continents;
+use Sportmonks\Football\Endpoint\Countries;
+use Sportmonks\Football\Endpoint\Regions;
+use Sportmonks\Football\Endpoint\Cities;
+use Sportmonks\Football\Endpoint\Filters;
+use Sportmonks\Football\Endpoint\My;
 
 
 /**
@@ -224,5 +230,47 @@ class FootballApi {
      */
     public static function venues() {
         return new Venues();
+    }
+
+    /**
+     * @return Continents
+     */
+    public static function continents() {
+        return new Continents();
+    }
+
+    /**
+     * @return Countries
+     */
+    public static function countries() {
+        return new Countries();
+    }
+
+    /**
+     * @return Regions
+     */
+    public static function regions() {
+        return new Regions();
+    }
+
+    /**
+     * @return Cities
+     */
+    public static function cities() {
+        return new Cities();
+    }
+
+    /**
+     * @return Filters
+     */
+    public static function filters() {
+        return new Filters();
+    }
+
+    /**
+     * @return My
+     */
+    public static function my() {
+        return new My();
     }
 }
