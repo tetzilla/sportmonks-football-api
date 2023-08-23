@@ -192,20 +192,6 @@ $response = FootballApi::states()->all();
 $response = FootballApi::states()->getById();
 ```
 
-### Types
-
-#### Get all types - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/types/get-all-types)
-
-```php
-$response = FootballApi::types()->all();
-```
-
-#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints/types/get-type-by-id)
-
-```php
-$response = FootballApi::types()->getById();
-```
-
 ### Leagues
 
 ##### Get all - [View Sportmonks Docs](https://sportmonks.com/docs/football/2.0/leagues/a/get-all-leagues/6)
@@ -806,6 +792,132 @@ $response = FootballApi::commentaries()->all();
 
 ```php
 $response = FootballApi::commentaries()->getByFixtureId($fixtureId);
+```
+
+## Core Endpoints
+Core contains all endpoints that are used in all sports.
+
+### Continents 🗺️
+
+#### Get all continents - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/continents/get-all-continents)
+
+```php
+$response = FootballApi::continents()->all();
+```
+
+#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/continents/get-continent-by-id)
+
+```php
+$response = FootballApi::continents()->getById();
+```
+
+### Countries
+
+#### Get all countries - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/countries/get-all-countries)
+
+```php
+$response = FootballApi::countries()->all();
+```
+
+#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/countries/get-country-by-id)
+
+```php
+$response = FootballApi::countries()->getById();
+```
+
+#### Get by search - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/countries/get-countries-by-search)
+
+```php
+$response = FootballApi::countries()->search($searchQuery);
+```
+
+### Regions
+
+#### Get all regions - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/regions/get-all-regions)
+
+```php
+$response = FootballApi::regions()->all();
+```
+
+#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/regions/get-region-by-id)
+
+```php
+$response = FootballApi::regions()->getById();
+```
+
+#### Get by search - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/regions/get-regions-by-search)
+
+```php
+$response = FootballApi::regions()->search($searchQuery);
+```
+
+### Cities 🏙️
+
+#### Get all cities - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/cities/get-all-cities)
+
+```php
+$response = FootballApi::cities()->all();
+```
+
+#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/cities/get-city-by-id)
+
+```php
+$response = FootballApi::cities()->getById();
+```
+
+#### Get by search - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/cities/get-cities-by-search)
+
+```php
+$response = FootballApi::cities()->search($searchQuery);
+```
+
+### Types ⌨️
+
+#### Get all types - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/types/get-all-types)
+
+```php
+$response = FootballApi::types()->all();
+```
+
+#### Get by id - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/types/get-type-by-id)
+
+```php
+$response = FootballApi::types()->getById();
+```
+
+#### Get by Entity - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/types/get-type-by-entity)
+
+```php
+$response = FootballApi::types()->getByEntity();
+```
+
+### Filters ⚙️
+
+#### Get all entity - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/filters/get-all-entity-filters)
+
+```php
+$response = FootballApi::filters()->entity();
+```
+
+### My Sportmonks
+Retrieve information about your subscription.
+
+#### Get my enrichments - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/my-sportmonks/get-my-enrichments)
+
+```php
+$response = FootballApi::my()->enrichments();
+```
+
+#### Get my resources - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/my-sportmonks/get-my-resources)
+
+```php
+$response = FootballApi::my()->resources();
+```
+
+#### Get my leagues - [View Sportmonks Docs](https://docs.sportmonks.com/football/v/core-api/endpoints/my-sportmonks/get-my-leagues)
+
+```php
+$response = FootballApi::my()->leagues();
 ```
 
 ## License

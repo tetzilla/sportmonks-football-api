@@ -7,37 +7,37 @@ use Sportmonks\Football\FootballClient;
 use stdClass;
 
 /**
- * Class TvStations
+ * Class Types
  * @package Sportmonks\Football\Endpoint
  */
-class TvStations extends FootballClient {
+class My extends FootballClient {
+
+    public $baseUri = 'https://api.sportmonks.com/v3/my/';
 
     /**
      * @return stdClass
      * @throws ApiRequestException
      */
-    public function all() {
-        $url = "tv-stations";
+    public function enrichments() {
+        $url = "enrichments";
         return $this->call($url);
     }
 
     /**
-     * @param int $tvStationId
      * @return stdClass
      * @throws ApiRequestException
      */
-    public function getById(int $tvStationId) {
-        $url = "tv-stations/{$tvStationId}";
+    public function resources() {
+        $url = "resources";
         return $this->call($url);
     }
 
     /**
-     * @param int $fixtureId
      * @return stdClass
      * @throws ApiRequestException
      */
-    public function getByFixtureId(int $fixtureId) {
-        $url = "tv-stations/fixtures/{$fixtureId}";
+    public function leagues() {
+        $url = "leagues";
         return $this->call($url);
     }
 }

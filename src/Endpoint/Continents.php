@@ -10,7 +10,7 @@ use stdClass;
  * Class Types
  * @package Sportmonks\Football\Endpoint
  */
-class Types extends FootballClient {
+class Continents extends FootballClient {
 
     public $baseUri = 'https://api.sportmonks.com/v3/core/';
 
@@ -19,26 +19,17 @@ class Types extends FootballClient {
      * @throws ApiRequestException
      */
     public function all() {
-        $url = "types";
+        $url = "continents";
         return $this->call($url);
     }
 
     /**
-     * @param int $typeId
+     * @param int $continentId
      * @return stdClass
      * @throws ApiRequestException
      */
-    public function getById(int $typeId) {
-        $url = "types/{$typeId}";
-        return $this->call($url);
-    }
-
-    /**
-     * @return stdClass
-     * @throws ApiRequestException
-     */
-    public function getByEntity() {
-        $url = "types/entities";
+    public function getById(int $continentId) {
+        $url = "continents/{$continentId}";
         return $this->call($url);
     }
 }
