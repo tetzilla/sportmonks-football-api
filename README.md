@@ -82,13 +82,31 @@ $response = FootballApi::fixtures()
 ```
 
 ### Filtering
-// API call for Fixtures with filters
+
+##### Entity filter
 ```php
+// API call for Fixtures with filters
 $response = FootballApi::fixtures()
     ->setInclude(['events','statistics.type'])
     ->setFilters(['eventTypes' => [18,14]])
     ->getByDate('2023-03-19');
 ```
+
+##### Deleted filter
+```php
+// API call for Fixtures with deleted filter
+$response = FootballApi::fixtures()
+    ->setFilters(['deleted'])
+    ->getAll();
+```
+##### Populate filter
+```php
+// API call for Fixtures with populate (1000 per page)
+$response = FootballApi::fixtures()
+    ->setFilters(['populate'])
+    ->getAll();
+```
+
 Note: This client will not validate the usage for the correct endpoints and will not throw an error. Refer to the
 [Sportmonks docs](https://docs.sportmonks.com/football/endpoints-and-entities/endpoints) to see which endpoints support the above parameters.
 

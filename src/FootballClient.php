@@ -83,7 +83,7 @@ class FootballClient {
 		foreach ($filters as $filterName => $filterVars) {
 			if (is_array($filterVars)) {
 				$filter[] = $filterName . ':' . implode(",", array_map("trim", array_filter($filterVars)));
-			} elseif ($filterVars == 'deleted') {
+			} else {
 				$filter[] = $filterVars;
 			}
 		}
