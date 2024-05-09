@@ -97,14 +97,14 @@ $response = FootballApi::fixtures()
 // API call for Fixtures with deleted filter
 $response = FootballApi::fixtures()
     ->setFilters(['deleted'])
-    ->getAll();
+    ->all();
 ```
 ##### Populate filter
 ```php
 // API call for Fixtures with populate (1000 per page)
 $response = FootballApi::fixtures()
     ->setFilters(['populate'])
-    ->getAll();
+    ->all();
 ```
 
 Note: This client will not validate the usage for the correct endpoints and will not throw an error. Refer to the
